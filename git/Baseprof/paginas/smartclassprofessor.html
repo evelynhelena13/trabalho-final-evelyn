@@ -1,0 +1,69 @@
+{% extends 'baseprof.html' %}
+
+{% block main %}
+
+		<div>
+			<ul>
+			  <li></h1><a href="areaprofessor.html"> <button class="button2" style="vertical-align:middle" ><span><h4><pre>HOME</pre></h4></span></button></a></li>
+			</ul>
+		</div>
+
+		<div class="content">
+			<div class="col-3 left">
+				<div class="aside">
+					<img src="..\Imagens\prof.png">
+					<p><strong>Ola:</strong> Nome do professor </p>
+					<p><strong>disciplina:</strong> nome do curso</p>
+					<a href="..\Paginas\notasefaltasprofessor.html">
+						<p>
+							<button class="button" style="vertical-align:middle">
+								<span>
+									<h4>Notas e Faltas</h4>
+								</span>
+							</button>
+						</p>
+					</a>
+					<a href="..\imagens\calendario.png">
+								<p>
+									<button class="button" style="vertical-align:middle">
+										<span>
+											<h4>Calendário e Horários</h4>
+										</span>
+									</button>
+								</p>
+							</a>
+				
+					<a href="perfilprof.html">
+						<p>
+							<button class="button" style="vertical-align:middle">
+								<span>
+									<h4>Perfil</h4>
+								</span>
+							</button>
+						</p>
+					</a>
+					<a href="index.html">
+						<p>
+							<button class="button" style="vertical-align:middle">
+								<span>
+									<h4>Sair</h4>
+								</span>
+							</button>
+						</p>
+					</a>
+				</div>
+			</div>
+	
+			<div class="row">	
+				<div class="col-6 left">
+					<div id="menu">
+						<a href="..\Paginas\smartProf.html" target="_black"><p><button class="button" style="vertical-align:middle"><span><h4>Disponibilização matéria</h4></span></button></p></a>
+						<a href="..\Paginas\formprof.html" target="_black"><p><button class="button" style="vertical-align:middle"><span><h4>Disponibilização de Avaliação</h4></span></button></p></a>
+						<a href="..\Paginas\trabalhos.html" target="_black"><p><button class="button" style="vertical-align:middle"><span><h4>Resumo das Entregas Recebidas</h4></span></button></p></a>
+						
+					</div>
+				</div>
+			</div>
+		</div>
+		
+	{% endblock %}

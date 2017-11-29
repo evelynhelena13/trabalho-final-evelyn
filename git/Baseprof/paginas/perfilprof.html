@@ -1,0 +1,47 @@
+{% extends 'baseprof.html' %}
+
+{% block main %}
+
+<div>
+	<ul>
+	  <li></h1><a href="areaprofessor.html"> <button class="button2" style="vertical-align:middle" ><span><h4><pre>HOME</pre></h4></span></button></a></li>
+	</ul>
+</div>
+
+<div class="row">
+
+
+	<div class="col-3 left">
+		<div class="aside">
+			<img src="..\imagens\prof.png">
+			<p><strong>Nome do professor</strong></p>
+			<a href="editperfilprof.html"><button class="button" style="vertical-align:middle"><span><h4>Editar Perfil</h4></span></button></a>
+			<a href="editsenhaprof.html"><p><button class="button" style="vertical-align:middle"><span><h4>Alterar Senha</h4></span></button></p></a>
+			<a href="index.html"><p><button class="button" style="vertical-align:middle"><span><h4>Sair</h4></h2></span></button></p></a>
+		</div>
+	</div>
+	
+	<div class="col-6">
+		 <div class="box">
+			<p id="para"><strong>Dados pessoais</strong></p>
+			<pre>Nome: {{prof.nome}}   E-Mail:{{prof.emal}}</p>
+			CPF: {{prof.cpf}}   RG: {{prof.rg}}  CEL: {{prof.celular}}
+			</pre>
+		</div>
+		<div class="box">
+			<p id="para"><strong>Endereço</strong></p>
+			<pre>Rua: {{prof.rua}}   Nº: {{prof.nemero}}   Bairro:{{prof.bairro}}</p> 
+			Cidade: {{prof.cidade}}  CEP: {{prof.cep}}  UF: {{prof.uf}}  
+			</pre>
+		</div>
+		   <div class="box">
+			<p id="para"><strong>Informações sobre o curso</strong></p>
+			<pre>Turma: {{prof.turma}}   Professor(a): {{prof.nome}}   Horário:{{prof.horario}}</p> 
+			Sala: {{prof.sala}}  Curso: {{prof.curso}}  Disciplina: {{prof.diciplina}} 
+			</pre>
+		  </div>
+	</div>
+</div>
+
+
+{% endblock %}

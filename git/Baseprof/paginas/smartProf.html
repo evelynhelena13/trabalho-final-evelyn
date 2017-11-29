@@ -1,0 +1,179 @@
+{% extends 'baseprof.html' %}
+
+{% block main %}
+
+	<script>
+		$(document).ready(function() {
+			$( ".button" ).click(function() {
+			
+				if($("#" + $(this).attr("data-id")).hasClass("esconde")){
+					console.log("#" + $(this).attr("data-id"))
+					$("#" + $(this).attr("data-id")).removeClass("esconde");
+					$("#" + $(this).attr("data-id")).addClass("mostra");
+				}else {
+				
+					$("#" + $(this).attr("data-id")).addClass("esconde");
+					$("#" + $(this).attr("data-id")).removeClass("mostra");
+				}
+					
+			});
+		});
+	</script>
+
+	
+				<div>
+					<ul>
+					  <li></h1><a href="areaprofessor.html"> <button class="button2" style="vertical-align:middle" ><span><h4><pre>HOME</pre></h4></span></button></a></li>
+					</ul>
+				</div>
+				
+				<div class="row">
+					<div class="col-3 left">
+						<div class="aside">
+							<img src="..\Imagens\prof.png">
+							<p><strong>Ola:</strong> Nome do aluno </p>
+							<p><strong>disciplina:</strong> nome do curso</p>
+							<a href="..\Paginas\notasefaltasprofessor.html">
+								<p>
+									<button class="button" style="vertical-align:middle">
+										<span>
+											<h4>Notas e Faltas</h4>
+										</span>
+									</button>
+								</p>
+							</a>
+							<a href="..\imagens\calendario.png">
+								<p>
+									<button class="button" style="vertical-align:middle">
+										<span>
+											<h4>Calendário e Horários</h4>
+										</span>
+									</button>
+								</p>
+							</a>
+						
+							
+							<a href="perfilprof.html">
+								<p>
+									<button class="button" style="vertical-align:middle">
+										<span>
+											<h4>Perfil</h4>
+										</span>
+									</button>
+								</p>
+							</a>
+							<a href="index.html">
+								<p>
+									<button class="button" style="vertical-align:middle">
+										<span>
+											<h4>Sair</h4>
+										</span>
+									</button>
+								</p>
+							</a>
+						</div>
+					</div>
+				
+				
+					<div class="col-6">
+						<div id="menu">	
+							<div class="col-6 left">
+								<div class="button-select">
+									<button class="button" style="vertical-align:middle" data-id="sub-menu-1">
+										<h4>Linguagem SQL</h4>
+									</button>
+									<div id="sub-menu-1" class="sub-menu esconde">
+										<table>
+											<tr>
+												<p>Video aula</p>
+												<input type="file" id="myFile" name="videosql">
+												<button onclick="myFunction()">enviar</button>
+												<script>
+													function myFunction() {
+														var x = document.getElementById("myFile");
+														x.disabled = true;
+													}
+												</script>
+											</tr> 	
+											<tr>
+												<p>Material</p>
+												<input type="file" id="myFile" name="arquivosql">
+												<button onclick="myFunction()">enviar</button>
+												<script>
+													function myFunction() {
+														var x = document.getElementById("myFile");
+														x.disabled = true;
+													}
+												</script>
+											</tr>
+										</table>
+									</div>
+								
+									<button class="button" style="vertical-align:middle" data-id="sub-menu-2">
+										<h4>TecWeb</h4>
+									</button>
+									<div id="sub-menu-2" class="sub-menu esconde">
+										<table>
+											<tr>
+												<p>Video aula</p>
+												<input type="file" id="myFile" name="videoweb">
+												<button onclick="myFunction()">enviar</button>
+												<script>
+													function myFunction() {
+														var x = document.getElementById("myFile");
+														x.disabled = true;
+													}
+												</script>
+											</tr> 	
+											<tr>
+												<p>Material</p>
+												<input type="file" id="myFile" name="arqruivoweb">
+												<button onclick="myFunction()">enviar</button>
+												<script>
+													function myFunction() {
+														var x = document.getElementById("myFile");
+														x.disabled = true;
+													}
+												</script>
+											</tr>
+										</table>
+									</div>
+								
+
+									<button class="button" style="vertical-align:middle" data-id="sub-menu-3">
+										<h4>Linguagem de Programação II</h4>
+									</button>
+									<div id="sub-menu-3" class="sub-menu esconde">
+										<table>
+											<tr>
+												<p>Video aula</p>
+												<input type="file" id="myFile" name="videolp2">
+												<button onclick="myFunction()">enviar</button>
+												<script>
+													function myFunction() {
+														var x = document.getElementById("myFile");
+														x.disabled = true;
+													}
+												</script>
+											</tr> 	
+											<tr>
+												<p>Material</p>
+												<input type="file" id="myFile" name="arquivolp2">
+												<button onclick="myFunction()">enviar</button>
+												<script>
+													function myFunction() {
+														var x = document.getElementById("myFile");
+														x.disabled = true;
+													}
+												</script>
+											</tr>
+										</table>
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+				
+				
+{% endblock %}				

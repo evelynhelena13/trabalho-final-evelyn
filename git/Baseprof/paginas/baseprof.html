@@ -1,0 +1,70 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>{% block titulo %}{% endblock %}</title>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+		<link rel="stylesheet" href="..\css\areaaluno.css">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+		<link rel="stylesheet" href="{% static 'nome.css' %}" />
+	</head>
+	<body background="..\imagens\fundo.png">
+
+		<div>
+			<ul>
+				<center> <h1>UNIVANDS</h1></center>
+				<form action="/aluno/" method="post">
+					{% csrf_token %}
+					<label for="curso">Curso</label>
+				
+					<select name="curso_id" id="curso">
+					{% for curso in cs  %}
+						<option value="{{curso.id}}">{{  curso.sigla }}</option>
+					{% endfor %}
+					</select>
+
+
+					<label>RA</label>
+					<input name="ra" required="" type="number"/>
+					<label>Nome</label>
+					<input name="nome" required="" type="text"/>
+					<label>Email</label>
+					<input name="email" required="" type="email"/>
+					<input type="submit" value="Submit" />
+				</form>
+			</ul>
+		</div>
+        
+		
+		<main>
+            {% block main %}
+
+            {% endblock %}
+        </main>
+
+
+		<div class="footer">
+			<div class="w3-row-padding">
+				<div class="w3-third">
+					<h2>TELEFONE</h2>
+					<p>COM:(11)4241-7277</p> 
+					<p>CEL:(11)97565-7804</p>
+				</div>
+
+				<div class="w3-third">
+					<h2>E-MAIL</h2>
+					<p>unitectbfinal@hotmail.com</p>
+				</div>
+
+			    <div class="w3-third">
+					<h2>ENDEREÇO</h2>
+					<p>Av. Rudge, 315 - Bom Retiro, São Paulo - SP, 01133-000</p>
+				</div>				
+			</div>
+		</div>
+	
+	</body>
+</html>
